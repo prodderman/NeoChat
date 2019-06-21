@@ -12,7 +12,7 @@ declare var __LANG__: 'en' | 'he';
 declare var __HOST__: string;
 
 declare module 'theming/@externals' {
-  export { Theme } from 'shared/styles/theme';
+  export type Theme = any;
 }
 
 declare module "*.svg" {

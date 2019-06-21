@@ -5,13 +5,13 @@ import { withStyles, WithStyles } from './jss';
 const styles = {
   '@global': rule({
     html: {
-      fontSize: 16, // TODO: use rems everywhere in the project
-      fontFamily: 'Roboto, Arial, sans-serif',
+      fontSize: 16,
+      fontFamily: 'Consolas, monospace',
     },
     body: {
       margin: 0,
       fontSize: '1rem',
-      background: '#fff',
+      background: '#55ff55',
     },
     'html, body, #root': {
       height: '100%',

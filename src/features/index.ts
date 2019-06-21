@@ -1,5 +1,3 @@
-import * as usersSearch from './usersSearch';
-import * as repositoriesSearch from './repositoriesSearch';
-import * as profile from './profile';
+import * as chat from './chat';
 
-export { usersSearch, repositoriesSearch, profile };
+export { chat };

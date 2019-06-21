@@ -1,9 +1,9 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter, StaticRouter } from 'react-router-dom';
+import { hot } from 'react-hot-loader/root';
 import 'normalize.css';
 
-import { hot } from 'react-hot-loader/root';
 import { IAppData, IModule, IJssDependencies } from 'shared/types/app';
 import { BaseStyles, JssProvider, SheetsRegistry } from 'shared/styles';
 

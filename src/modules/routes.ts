@@ -1,7 +1,5 @@
-import { routes as searchRoutes } from './Search/routes';
-import { routes as profileRoutes } from './Profile/routes';
+import { routes as chatRoutes } from './Chat/routes';
 
 export default {
-  ...searchRoutes,
-  ...profileRoutes,
+  ...chatRoutes,
 };

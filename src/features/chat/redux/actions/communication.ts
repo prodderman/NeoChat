@@ -1,0 +1,9 @@
+import { makeCommunicationActionCreators } from 'redux-make-communication';
+import * as NS from '../../namespace';
+
+export const { execute: register, completed: registerSuccess, failed: registerFail } =
+  makeCommunicationActionCreators<NS.IRegister, NS.IRegisterSuccess, NS.IRegisterFail>(
+    'CHAT:REGISTER',
+    'CHAT:REGISTER_SUCCESS',
+    'CHAT:REGISTER_FAIL',
+  );
