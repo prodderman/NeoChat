@@ -203,8 +203,6 @@
     "yo": "^2.0.5"
   },
   "dependencies": {
-    "@material-ui/core": "^3.9.1",
-    "@material-ui/icons": "^3.0.2",
     "@types/autoprefixer": "^9.1.1",
     "@types/bem-cn": "^2.1.1",
     "@types/classnames": "^2.2.6",
@@ -253,7 +251,6 @@
     "jss": "^9.8.3",
     "jss-compose": "^5.0.0",
     "node-polyglot": "^2.3.0",
-    "node-sass": "^4.12.0",
     "normalize.css": "^8.0.0",
     "normalizr": "^2.3.1",
     "postcss-easy-import": "^3.0.0",
