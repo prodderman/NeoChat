@@ -209,6 +209,7 @@
     "@types/compression": "0.0.36",
     "@types/cookie-parser": "^1.4.1",
     "@types/core-decorators": "^0.20.0",
+    "@types/jss": "^9.5.8",
     "@types/node-polyglot": "^0.4.31",
     "@types/ramda": "^0.26.3",
     "@types/react": "^16.8.3",
