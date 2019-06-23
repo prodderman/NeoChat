@@ -44,7 +44,8 @@ export function ServerApp(props: IAppData & IServerAppProps & StaticRouter['prop
 }
 
 function renderSharedPart(
-  modules: IModule[], jssDeps: IJssDependencies,
+  modules: IModule[],
+  jssDeps: IJssDependencies,
   disableStylesGeneration?: boolean,
   registry?: SheetsRegistry,
 ) {

@@ -21,6 +21,7 @@ declare module "*.svg" {
 }
 
 declare module 'redux-async-connect';
+declare module 'jss-preset-default';
 declare module 'react-geosuggest';
 declare module 'normalizr';
 declare module '*.scss';
