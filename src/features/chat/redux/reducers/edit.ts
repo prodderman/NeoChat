@@ -8,8 +8,9 @@ function editReducer(state: NS.IReduxState['edit'] = initial.edit, action: NS.IA
         typedMessage: action.payload.typedMessage,
       };
     }
-    case 'CHAT:MESSAGE_CLEAR': {
+    case 'CHAT:SEND_MESSAGE_SUCCESS': {
       return {
+        ...state,
         typedMessage: '',
       };
     }
