@@ -37,6 +37,9 @@ export interface IReduxField<T> {
   touched?: boolean;
 }
 
+export type ReturnPromisedType<T extends (...args: any[]) => any> =
+  T extends (...args: any[]) => Promise<infer R> ? R : ReturnType<T>;
+
 // TODO: remove
 export type ReducersMap<T> = {
   [key in keyof T]: Reducer<T[key]>;

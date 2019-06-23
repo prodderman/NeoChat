@@ -6,7 +6,7 @@ const styles = {
   '@global': rule({
     html: {
       fontSize: 16,
-      fontFamily: 'Consolas, monospace',
+      fontFamily: 'monospace',
     },
     body: {
       margin: 0,
