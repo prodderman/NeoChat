@@ -13,11 +13,14 @@ class Message extends React.PureComponent<IProps & StylesProps> {
     return (
       <div className={classes.message}>
         <div className={classes.author}>
-          {`${this.getAuthorName(message)}:`}
+          {`${this.getAuthorName(message)}: `}
         </div>
-        <div className={classes.text}>
-          {message.message}
-        </div>
+        <div
+          className={classes.text}
+          dangerouslySetInnerHTML={{
+            __html: message.message,
+          }}
+        />
       </div>
     );
   }
