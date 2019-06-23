@@ -35,6 +35,7 @@ class Input extends React.PureComponent<IProps & StylesProps> {
   private handleSubmit(event: React.KeyboardEvent) {
     const { onSubmit, value } = this.props;
     if (event.key === 'Enter') {
+      event.preventDefault();
       onSubmit(value);
     }
   }
