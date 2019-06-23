@@ -9,6 +9,7 @@ const initial: IReduxState = {
   },
   communication: {
     registration: initialCommunicationField,
+    messageSending: initialCommunicationField,
   },
   edit: {
     typedMessage: '',

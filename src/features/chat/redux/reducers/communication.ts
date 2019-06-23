@@ -11,4 +11,10 @@ export default combineReducers<NS.IReduxState['communication']>({
     'CHAT:REGISTER_FAIL',
     initial.communication.registration,
   ),
+  messageSending: makeCommunicationReducer<NS.ISendMessage, NS.ISendMessageSuccess, NS.ISendMessageFail>(
+    'CHAT:SEND_MESSAGE',
+    'CHAT:SEND_MESSAGE_SUCCESS',
+    'CHAT:SEND_MESSAGE_FAIL',
+    initial.communication.messageSending,
+  ),
 });

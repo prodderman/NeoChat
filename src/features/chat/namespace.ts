@@ -8,6 +8,7 @@ export interface IReduxState {
   };
   communication: {
     registration: ICommunication;
+    messageSending: ICommunication;
   };
   edit: {
     typedMessage: string;
