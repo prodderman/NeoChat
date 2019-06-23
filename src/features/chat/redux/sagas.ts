@@ -72,6 +72,7 @@ function getSubscriberToMessages({ api }: IDependencies, connectionID: string) {
 
 function* sendMessage(deps: IDependencies, { payload: { message } }: NS.ISendMessage) {
   try {
+    if (message === '') { throw new Error('Empty Message'); }
     const connectionID: ReturnType<typeof selectors.selectConnectionID> = yield select(selectors.selectConnectionID);
     const userID: ReturnType<typeof selectors.selectUserID> = yield select(selectors.selectUserID);
     yield call(deps.api.socket.sendMessage, connectionID, { message, connectionID, userID });
