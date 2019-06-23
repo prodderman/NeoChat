@@ -18,7 +18,6 @@ interface IStateProps {
 interface IActionProps {
   register: typeof actions.register;
   changeMessage: typeof actions.changeMessage;
-  clearMessage: typeof actions.clearMessage;
   sendMessage: typeof actions.sendMessage;
 }
 
@@ -34,13 +33,22 @@ function mapState(state: IAppReduxState): IStateProps {
 const mapDispatch: IActionProps = {
   register: actions.register,
   changeMessage: actions.changeMessage,
-  clearMessage: actions.clearMessage,
   sendMessage: actions.sendMessage,
 };
 
 class Chat extends React.PureComponent<IProps> {
+  private charRef = React.createRef<HTMLElement>();
   public componentDidMount() {
     this.props.register();
+    if (this.charRef.current) {
+      this.charRef.current.focus();
+    }
+  }
+
+  public componentDidUpdate(prevProps: IProps) {
+    if (this.charRef.current && prevProps.messages.length !== this.props.messages.length) {
+      this.charRef.current.scrollIntoView();
+    }
   }
 
   public render() {
@@ -50,6 +58,7 @@ class Chat extends React.PureComponent<IProps> {
         <div className={classes.viewPort}>
           {messages.map(this.renderMessage)}
           <Input
+            forwardRef={this.charRef}
             value={typedMessage}
             onChange={changeMessage}
             onSubmit={this.sendMessage}
@@ -71,9 +80,8 @@ class Chat extends React.PureComponent<IProps> {
 
   @autobind
   private sendMessage(message: string) {
-    const { sendMessage, clearMessage } = this.props;
+    const { sendMessage } = this.props;
     sendMessage({ message: trim(message) });
-    clearMessage();
   }
 }
 

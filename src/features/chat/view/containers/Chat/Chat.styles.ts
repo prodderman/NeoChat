@@ -7,6 +7,9 @@ const styles = {
     backgroundColor: '#000',
     height: '100%',
     overflowY: 'auto',
+    '&::-webkit-scrollbar': rule({
+      display: 'none',
+    }),
   }),
 
   overlay: rule({

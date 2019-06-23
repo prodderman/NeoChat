@@ -15,6 +15,7 @@ const styles = {
     },
     'html, body, #root': {
       height: '100%',
+      overflowX: 'hidden',
     },
     '*': {
       boxSizing: 'border-box',

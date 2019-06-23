@@ -9,13 +9,17 @@ const styles = {
     textShadow: '0px 0px 10px #0f0a',
   }),
 
+  prompt: rule({
+    marginRight: '10px',
+  }),
+
   field: rule({
     background: 'none',
     border: 'none',
     outline: 'none',
     margin: 0,
     padding: 0,
-    width: '100%',
+    width: '98%',
   }),
 };
 

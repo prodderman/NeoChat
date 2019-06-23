@@ -12,8 +12,9 @@ const styles = {
   }),
   author: rule({
     flexShrink: 0,
-    flexBasis: '160px',
+    flexBasis: '130px',
     textAlign: 'right',
+    marginRight: '5px',
   }),
   text: rule({
     wordWrap: 'break-word',
