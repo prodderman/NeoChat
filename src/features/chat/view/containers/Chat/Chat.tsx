@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { trim } from 'ramda';
 import { autobind } from 'core-decorators';
 
 import { IAppReduxState } from 'shared/types/app';
@@ -71,7 +72,7 @@ class Chat extends React.PureComponent<IProps> {
   @autobind
   private sendMessage(message: string) {
     const { sendMessage, clearMessage } = this.props;
-    sendMessage({ message });
+    sendMessage({ message: trim(message) });
     clearMessage();
   }
 }
